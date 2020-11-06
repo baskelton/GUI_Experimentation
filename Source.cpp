@@ -7,8 +7,6 @@ Date: 8/28/2020
 
 #include "RestaurantGen.h"
 
-using namespace std;
-
  //Reads record of where you were chosen to eat this time running the program.
 
 //const string Restaurant_File_Name = ("Restaurant.txt");
