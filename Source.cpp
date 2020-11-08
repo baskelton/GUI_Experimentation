@@ -5,7 +5,7 @@ Class: CIS170C
 Date: 8/28/2020
 */
 
-#include "RestaurantGen.h"
+#include "fileGen.h"
 
 //Reads record of where you were chosen to eat this time running the program.
 
@@ -19,7 +19,7 @@ int main()
     unsigned seed = time(0);
     srand(seed);
 
-    RestaurantGen Food;
+    fileGen Food;
 
     string file = " ";
 
@@ -34,6 +34,7 @@ int main()
     while (choice1 != 'E' && choice1 != 'e')
     {
         cout << "Please enter your name: ";
+        cin.clear();
         cin.ignore();
         getline(cin, name);
         Food.setName(name);

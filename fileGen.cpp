@@ -1,4 +1,5 @@
 #include "fileGen.h"
+using namespace std;
 
 fileGen::fileGen() {
     string x = "Unknown"; string Restaurant_File_Name = "Restaurant.txt";
@@ -9,12 +10,38 @@ void fileGen::setFileName(string file) {
 void fileGen::setName(string name) {
     y = name;
 }
-void fileGen::cheap() {
-    vector<string> RestaurantCheap = { "McDonalds", "Burger King", "Wendy's", "Subway" };
-    int randIndex = rand() % 4;
-    x = RestaurantCheap[randIndex];
-    fileGen::EnterAndWriteRestaurants();
+
+void fileGen::addRestaurant(string name) {
+    RestaurantCheap.push_back(name);
 }
+/*void fileGen::cheap(name) {
+    int size;
+    string Test;
+    cout << "Please enter the number of restaurants you'd like to consider: " << endl;
+    cin >> size;
+    vector<Restaurant> RestaurantCheap;
+    RestaurantCheap.resize(size);
+    cout << "Enter in the restaurant names you'd like considered. Enter E when finished. " << endl;
+    getline(cin, Test);
+    while (Test != "E"){
+        RestaurantCheap.push_back(Restaurant(name));
+        getline(cin, Test);
+    }
+    
+    if (Test == "E") {
+        for (int i = 0; i < (RestaurantCheap.size()); i++) {
+            RestaurantCheap[i];
+            cout << RestaurantCheap[i] << endl;
+        }
+    }
+
+    int randIndex = (rand() % size) - 1;
+    cout << randIndex << endl;
+    x = RestaurantCheap[randIndex];
+    cout << RestaurantCheap[randIndex] << endl;
+    cout << x << endl;
+    fileGen::EnterAndWriteRestaurants();
+}*/
 void fileGen::moderate() {
     vector<string> RestaurantMod = { "Chilis", "Applebees", "Buffalo Wild Wings", "Pizza Hut" };
     int randIndex = rand() % 4;
@@ -50,4 +77,4 @@ void fileGen::ReadAndDisplayRestaurants() {
     else
         cout << "Error; could not open the desired file for reading." << endl;
     infile.close();
-}
+} 
